@@ -62,7 +62,6 @@
 
 <script>
 export default {
-  name: 'location',
   data() {
     return {
       iframe: {
