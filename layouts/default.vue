@@ -94,6 +94,11 @@ export default {
           title: 'Contact Us',
           to: '/contact',
         },
+        {
+          icon: mdiHome,
+          title: 'Location',
+          to: '/location',
+        },
       ],
       title: 'Vuetify.js',
       mdiMenu,
