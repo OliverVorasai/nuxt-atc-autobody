@@ -31,7 +31,13 @@
       ></v-img>
     </v-row>
     <v-row>
-      <v-col cols="12" sm="12" md="6" lg="6" class="pa-16 blue lighten-5">
+      <v-col
+        cols="12"
+        sm="12"
+        md="6"
+        lg="6"
+        class="pa-6 pa-md-16 blue lighten-5"
+      >
         <h1 class="text-center text-h5 text-lg-h4 blue--text mb-4 mb-xl-12">
           ATC Auto Body is a Full-Service Auto Body Repair Shop
         </h1>
