@@ -68,7 +68,7 @@
           <v-icon size="96" color="blue darken-2">{{ mdiShieldCar }}</v-icon>
         </div>
         <h2 class="text-h5 text-lg-h4 font-weight-bold mb-6">
-          Let us deal work with your insurance.
+          Let us deal with your insurance.
         </h2>
         <p class="text-h6">
           Shopping for auto repairs can be stressful when your only mode of
