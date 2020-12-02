@@ -19,14 +19,14 @@
         </v-col>
       </v-row>
     </v-parallax>
-    <v-row class="my-12" justify="center">
+    <v-row class="my-12 mx-2" justify="center">
       <v-img
         v-for="image in images"
         :key="image.pathShort"
         :max-height="brandHeight"
-        :max-width="brandHeight"
+        :max-width="brandIconMaxWidth"
         :src="image.pathLong"
-        class="mx-12 my-6"
+        :class="brandIconClasses"
         contain
       ></v-img>
     </v-row>
@@ -117,7 +117,23 @@ export default {
       mdiHammerWrench,
     }
   },
-  mounted() {
+  computed: {
+    brandIconMaxWidth() {
+      if (this.$vuetify.breakpoint.xs) {
+        return '45%'
+      } else {
+        return this.brandHeight
+      }
+    },
+    brandIconClasses() {
+      if (this.$vuetify.breakpoint.xs) {
+        return 'mx-2 my-6'
+      } else {
+        return 'mx-12 my-6'
+      }
+    },
+  },
+  created() {
     this.importAll(
       require.context('@/assets/brand-logos/', true, /\.svg$|.png$|.jpg$/)
     )
