@@ -119,7 +119,7 @@
 </template>
 
 <script>
-import { mdiMenu, mdiHome } from '@mdi/js'
+import { mdiMenu, mdiHome, mdiMap, mdiCompare } from '@mdi/js'
 
 export default {
   data() {
@@ -132,12 +132,12 @@ export default {
           to: '/',
         },
         {
-          icon: mdiHome,
+          icon: mdiCompare,
           title: 'Before & After',
           to: 'before-and-after',
         },
         {
-          icon: mdiHome,
+          icon: mdiMap,
           title: 'Location',
           to: '/location',
         },
