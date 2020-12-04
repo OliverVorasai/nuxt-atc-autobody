@@ -1,6 +1,6 @@
 <template>
   <v-app dark>
-    <v-navigation-drawer v-model="drawer" disable-resize-watcher app>
+    <v-navigation-drawer v-model="drawer" disable-resize-watcher right app>
       <v-list>
         <v-list-item
           v-for="(item, i) in items"
@@ -18,24 +18,12 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar color="blue" flat app>
-      <span class="hidden-sm-and-up">
-        <v-app-bar-nav-icon
-          color="white"
-          aria-label="Show side navigation"
-          @click.stop="drawer = !drawer"
-        >
-          <v-icon>{{ mdiMenu }}</v-icon>
-        </v-app-bar-nav-icon>
-      </span>
+    <v-app-bar app>
       <v-img
         :src="require('@/assets/atc-logo.svg')"
         max-height="50"
         max-width="150"
       ></v-img>
-      <!--
-      <v-toolbar-title v-text="$store.state.business_info.name" />
-      -->
       <v-spacer />
       <v-toolbar-items class="hidden-xs-only">
         <v-btn
@@ -52,6 +40,16 @@
         </v-btn>
       </v-toolbar-items>
       <v-spacer></v-spacer>
+      <div class="nav-spacer hidden-sm-and-down"></div>
+      <span class="hidden-sm-and-up">
+        <v-app-bar-nav-icon
+          color="white"
+          aria-label="Show side navigation"
+          @click.stop="drawer = !drawer"
+        >
+          <v-icon color="black">{{ mdiMenu }}</v-icon>
+        </v-app-bar-nav-icon>
+      </span>
     </v-app-bar>
     <v-main>
       <v-container class="pa-0" fluid>
@@ -162,5 +160,8 @@ export default {
   a:hover {
     text-decoration: underline;
   }
+}
+.nav-spacer {
+  width: 150px;
 }
 </style>
