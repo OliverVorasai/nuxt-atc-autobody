@@ -133,23 +133,8 @@ export default {
         },
         {
           icon: mdiHome,
-          title: 'About Us',
-          to: '/about',
-        },
-        {
-          icon: mdiHome,
           title: 'Before & After',
           to: 'before-and-after',
-        },
-        {
-          icon: mdiHome,
-          title: 'Service',
-          to: '/service',
-        },
-        {
-          icon: mdiHome,
-          title: 'Contact Us',
-          to: '/contact',
         },
         {
           icon: mdiHome,
