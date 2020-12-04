@@ -14,7 +14,7 @@
         >
           <h1 class="text-h4 mb-4 blue--text">ATC Autobody &amp; Paint</h1>
           <h2 class="text-h4 black--text">
-            Owner operated collision repair center in the heart of Portland.
+            Owner operated collision repair centered in the heart of Portland.
           </h2>
         </v-col>
       </v-row>
@@ -51,8 +51,8 @@
           than satisfied.
         </p>
         <p class="text-center text-h6 text-xl-h5 mb-xl-12">
-          Customer satisfaction is our number One priority, so we strive to have
-          your vehicle in and out as fast as possible, while maintaining our
+          Customer satisfaction is our number one priority, so we strive to have
+          your vehicle in and out as fast as possible while maintaining our
           reputation for high quality repairs.
         </p>
       </v-col>
@@ -107,11 +107,51 @@
         </p>
       </v-col>
     </v-row>
+    <v-row justify="center" class="mx-6 mx-md-16 mt-6">
+      <v-col cols="12">
+        <h1 class="text-center blue--text">Warranty Guarantee</h1>
+      </v-col>
+      <v-col cols="12" sm="12" md="4" lg="4">
+        <div class="text-center mb-6">
+          <v-icon size="96" color="orange darken-2">{{
+            mdiCarShiftPattern
+          }}</v-icon>
+        </div>
+        <h2 class="text-h5 text-lg-h4 font-weight-bold mb-6">
+          Parts Warranty:
+        </h2>
+        <p class="text-h6">
+          All parts will be guaranteed against defects of material and
+          workmanship for the term of the manufacturer’s warranty with ATC Auto
+          Body. Generally, parts will be covered for one year, but there may be
+          some variations depending on the specific part.
+        </p>
+      </v-col>
+      <v-col cols="12" sm="12" md="4" lg="4">
+        <div class="text-center mb-6">
+          <v-icon size="96" color="teal">{{ mdiFormatPaint }}</v-icon>
+        </div>
+        <h2 class="text-h5 text-lg-h4 font-weight-bold mb-6">
+          Paint Warranty:
+        </h2>
+        <p class="text-h6">
+          You can be assured that your paint will meet the high standards we
+          place on our work and will be backed by a nationwide paint warranty.
+          Please contact us for more details on our paint warranty policy.
+        </p>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
-import { mdiShieldCar, mdiSpray, mdiHammerWrench } from '@mdi/js'
+import {
+  mdiShieldCar,
+  mdiSpray,
+  mdiHammerWrench,
+  mdiCarShiftPattern,
+  mdiFormatPaint,
+} from '@mdi/js'
 
 export default {
   data() {
@@ -121,6 +161,8 @@ export default {
       mdiShieldCar,
       mdiSpray,
       mdiHammerWrench,
+      mdiCarShiftPattern,
+      mdiFormatPaint,
     }
   },
   computed: {
