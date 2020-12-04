@@ -138,6 +138,11 @@ export default {
         },
         {
           icon: mdiHome,
+          title: 'Before & After',
+          to: 'before-and-after',
+        },
+        {
+          icon: mdiHome,
           title: 'Service',
           to: '/service',
         },
