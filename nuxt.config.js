@@ -77,6 +77,10 @@ export default {
         name: 'business-info',
         type: 'single',
       },
+      {
+        name: 'before-and-afters',
+        type: 'collection',
+      },
     ],
   },
 }

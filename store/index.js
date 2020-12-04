@@ -14,11 +14,23 @@ export const mutations = {
     }
     state.business_info = value
   },
+
+  SET_BEFORE_AND_AFTERS(state, value) {
+    value.forEach((item) => {
+      item.before.url = process.env.strapiBaseUri + item.before.url
+      item.after.url = process.env.strapiBaseUri + item.after.url
+      item.model = 0
+    })
+    state.before_and_afters = value
+  },
 }
 
 export const actions = {
   async nuxtServerInit({ commit }, context) {
     const body = await context.$strapi.find('business-info')
     commit('SET_BUSINESS_INFO', body)
+
+    const beforeAndAfters = await context.$strapi.find('before-and-afters')
+    commit('SET_BEFORE_AND_AFTERS', beforeAndAfters)
   },
 }
