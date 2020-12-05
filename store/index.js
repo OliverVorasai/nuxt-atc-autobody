@@ -6,11 +6,11 @@ export const mutations = {
   SET_BUSINESS_INFO(state, value) {
     if (Object.prototype.hasOwnProperty.call(value, 'open_hour')) {
       const datetime = new Date('1970-01-01T' + value.open_hour)
-      value.open_hour = datetime.toLocaleTimeString([], { hour: '2-digit' })
+      value.open_hour = datetime.toLocaleTimeString([], { hour: 'numeric' })
     }
     if (Object.prototype.hasOwnProperty.call(value, 'close_hour')) {
       const datetime = new Date('1970-01-01T' + value.close_hour)
-      value.close_hour = datetime.toLocaleTimeString([], { hour: '2-digit' })
+      value.close_hour = datetime.toLocaleTimeString([], { hour: 'numeric' })
     }
     state.business_info = value
   },

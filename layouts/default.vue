@@ -95,7 +95,10 @@
               </p>
               <h4 class="pb-6">Hours</h4>
               <p class="pb-6 mb-0">Monday - Friday</p>
-              <p class="pb-6 mb-0">8AM - 5PM</p>
+              <p class="pb-6 mb-0">
+                {{ $store.state.business_info.open_hour }} -
+                {{ $store.state.business_info.close_hour }}
+              </p>
             </div>
           </v-col>
         </v-row>
