@@ -19,6 +19,7 @@
       >
         <v-card class="mx-auto">
           <v-carousel
+            v-model="item.model"
             hide-delimiters
             :show-arrows-on-hover="!$vuetify.breakpoint.xs"
             :prev-icon="mdiChevronLeft"
