@@ -163,6 +163,31 @@ export default {
       mdiHammerWrench,
       mdiCarShiftPattern,
       mdiFormatPaint,
+      structuredData: {
+        '@context': 'https://schema.org/',
+        '@type': this.$store.state.business_info.business_type,
+        image: [require('@/assets/stock-images/front-image-1.jpg')],
+        '@id': this.$store.state.business_info.url,
+        name: this.$store.state.business_info.name,
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: this.$store.state.business_info.address_street,
+          addressLocality: this.$store.state.business_info.address_locality,
+          addressRegion: this.$store.state.business_info.address_region,
+          postalCode: this.$store.state.business_info.postal_code,
+          addressCountry: this.$store.state.business_info.address_country,
+        },
+        url: this.$store.state.business_info.url,
+        telephone: this.$store.state.business_info.telephone,
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: this.$store.state.business_info.open_hour,
+            closes: this.$store.state.business_info.close_hour,
+          },
+        ],
+      },
     }
   },
   computed: {
@@ -192,6 +217,17 @@ export default {
         this.images.push({ pathLong: r(key), pathShort: key })
       )
     },
+  },
+  head() {
+    return {
+      title: 'Home',
+      script: [
+        {
+          type: 'application/ld+json',
+          json: this.structuredData,
+        },
+      ],
+    }
   },
 }
 </script>
