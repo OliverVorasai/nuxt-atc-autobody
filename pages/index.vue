@@ -30,7 +30,7 @@
         contain
       ></v-img>
     </v-row>
-    <v-row>
+    <v-row class="mx-0">
       <v-col
         cols="12"
         sm="12"
