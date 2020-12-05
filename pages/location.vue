@@ -14,13 +14,16 @@
           href="https://g.page/AtcAutobody?share"
           target="_blank"
           rel="noopener"
+          aria-label="Open ATC Autobody on Google Maps"
           >{{ $store.state.business_info.address_full }}</a
         >
       </p>
       <p class="my-0 mt-2 font-weight-bold text-h5">
-        <a :href="'tel:' + $store.state.business_info.telephone">{{
-          $store.state.business_info.telephone_pretty
-        }}</a>
+        <a
+          :href="'tel:' + $store.state.business_info.telephone"
+          aria-label="Call ATC Autobody"
+          >{{ $store.state.business_info.telephone_pretty }}</a
+        >
       </p>
     </div>
 
@@ -54,6 +57,7 @@
         allowfullscreen="false"
         aria-hidden="false"
         tabindex="0"
+        title="ATC Autobody Google Maps"
         @load="iframe.loaded = true"
       ></iframe>
     </transition>

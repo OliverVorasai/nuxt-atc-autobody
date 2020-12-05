@@ -3,6 +3,7 @@
     <v-parallax
       :src="require('@/assets/stock-images/man-polish-car-garage-2.jpg')"
       height="800"
+      alt=""
     >
       <v-row align="center" justify="center">
         <v-col
@@ -27,6 +28,7 @@
         :max-width="brandIconMaxWidth"
         :src="image.pathLong"
         :class="brandIconClasses"
+        :alt="image.pathShort"
         contain
       ></v-img>
     </v-row>
@@ -60,6 +62,7 @@
         <v-img
           :src="require('@/assets/stock-images/front-image-1.jpg')"
           height="100%"
+          alt="ATC Auto Body Business Sign"
         ></v-img>
       </v-col>
     </v-row>
