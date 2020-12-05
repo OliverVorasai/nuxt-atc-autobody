@@ -1,32 +1,31 @@
 <template>
   <v-container>
-    <div class="text-center">
-      <h1>Hours &amp; Location</h1>
-    </div>
-    <div class="text-center mt-6 mb-12">
-      <p class="my-0 text-h5">Monday - Friday</p>
-      <p class="my-0 text-h5">
-        {{ $store.state.business_info.open_hour }} -
-        {{ $store.state.business_info.close_hour }}
-      </p>
-      <p class="my-0 mt-6 font-weight-bold text-h5">
-        <a
-          href="https://g.page/AtcAutobody?share"
-          target="_blank"
-          rel="noopener"
-          aria-label="Open ATC Autobody on Google Maps"
-          >{{ $store.state.business_info.address_full }}</a
-        >
-      </p>
-      <p class="my-0 mt-2 font-weight-bold text-h5">
-        <a
-          :href="'tel:' + $store.state.business_info.telephone"
-          aria-label="Call ATC Autobody"
-          >{{ $store.state.business_info.telephone_pretty }}</a
-        >
-      </p>
-    </div>
-
+    <v-row justify="center">
+      <v-col cols="12" class="text-center">
+        <h1>Hours &amp; Location</h1>
+        <p class="my-0 mt-6 text-h5">Monday - Friday</p>
+        <p class="my-0 text-h5">
+          {{ $store.state.business_info.open_hour }} -
+          {{ $store.state.business_info.close_hour }}
+        </p>
+        <p class="my-0 mt-6 font-weight-bold text-h5">
+          <a
+            href="https://g.page/AtcAutobody?share"
+            target="_blank"
+            rel="noopener"
+            aria-label="Open ATC Autobody on Google Maps"
+            >{{ $store.state.business_info.address_full }}</a
+          >
+        </p>
+        <p class="my-0 mt-2 font-weight-bold text-h5">
+          <a
+            :href="'tel:' + $store.state.business_info.telephone"
+            aria-label="Call ATC Autobody"
+            >{{ $store.state.business_info.telephone_pretty }}</a
+          >
+        </p>
+      </v-col>
+    </v-row>
     <v-row class="my-12" justify="center">
       <v-img
         v-for="image in images"
