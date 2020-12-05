@@ -73,7 +73,7 @@ export default {
       brandHeight: 300,
     }
   },
-  mounted() {
+  created() {
     this.importAll(
       require.context('@/assets/building-images/', true, /\.svg$|.png$|.jpg$/)
     )
