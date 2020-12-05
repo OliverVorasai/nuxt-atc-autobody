@@ -6,6 +6,7 @@
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
+          :aria-label="item.title"
           router
           exact
         >
